@@ -1,3 +1,11 @@
+terraform {
+  backend "s3" {
+    bucket         = "github-actions-terraform-activity"  
+    key            = "terraform-tfstate-activity"           
+    region         = "us-east-1"                  
+  }
+}
+
 # Configure the AWS Provider
 provider "aws" {
   region = "us-east-1"  # Set AWS region to US East 1 (N. Virginia)
